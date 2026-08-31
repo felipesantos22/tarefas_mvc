@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "8szqSuU69M4=",
+  "success": true,
+  "projectFilePath": "/Users/felipesantos/AspNetMvc/Tarefas/Tarefas/Tarefas.csproj",
+  "expectedPackageFiles": [
+    "/Users/felipesantos/.nuget/packages/dapper/2.1.79/dapper.2.1.79.nupkg.sha512",
+    "/Users/felipesantos/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/felipesantos/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/Users/felipesantos/.nuget/packages/npgsql/10.0.3/npgsql.10.0.3.nupkg.sha512",
+    "/Users/felipesantos/.nuget/packages/system.diagnostics.diagnosticsource/9.0.11/system.diagnostics.diagnosticsource.9.0.11.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: Access to the path '/Users/felipesantos/.local/share/NuGet/http-cache/670c1461c29885f9aa22c281d8b7da90845b38e4$ps:_api.nuget.org_v3_index.json/vuln_index.dat-new' is denied.",
+      "projectPath": "/Users/felipesantos/AspNetMvc/Tarefas/Tarefas/Tarefas.csproj",
+      "warningLevel": 1,
+      "filePath": "/Users/felipesantos/AspNetMvc/Tarefas/Tarefas/Tarefas.csproj",
+      "targetGraphs": []
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+@model Tarefas.Models.Item;
+
+@{
+    ViewBag.Title = "Detalhes da Tarefa";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="mb-4">
+                <h1 class="fw-bold">Detalhes da tarefa</h1>
+                <p class="text-muted">
+                    Visualize as informações da tarefa abaixo.
+                </p>
+            </div>
+
+            <div class="card shadow-sm border-0">
+
+                <div class="card-header bg-black text-white py-3">
+                    <h5 class="mb-0">
+                        <i class="bi bi-check2-square me-2"></i>
+                        Tarefa
+                    </h5>
+                </div>
+
+                <div class="card-body p-4">
+
+                    <div class="mb-4">
+                        <label class="form-label text-muted fw-semibold">
+                            Título
+                        </label>
+
+                        <h3 class="fw-bold mb-0">
+                            @Model.Titulo
+                        </h3>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label text-muted fw-semibold">
+                            Descrição
+                        </label>
+
+                        <p class="fs-5 mb-0">
+                            @Model.Descricao
+                        </p>
+                    </div>
+
+                    <hr/>
+
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+
+                        <a asp-action="Index"
+                           class="btn btn-outline-secondary">
+                            <i class="bi bi-arrow-left me-1"></i>
+                            Voltar
+                        </a>
+
+                        <a asp-action="Edit"
+                           asp-route-id="@Model.Id"
+                           class="btn btn-primary">
+                            <i class="bi bi-pencil me-1"></i>
+                            Editar
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
