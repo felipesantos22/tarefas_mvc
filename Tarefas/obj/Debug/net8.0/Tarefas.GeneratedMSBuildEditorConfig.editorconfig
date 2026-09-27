@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Tarefas
 build_property.RootNamespace = Tarefas
@@ -18,8 +26,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/felipesantos/AspNetMvc/Tarefas/Tarefas
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/felipesantos/AspNetMvc/Tarefas/Tarefas/Views/Login/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9naW4vSW5kZXguY3NodG1s
+[/Users/felipesantos/AspNetMvc/Tarefas/Tarefas/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/felipesantos/AspNetMvc/Tarefas/Tarefas/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/felipesantos/AspNetMvc/Tarefas/Tarefas/Views/Shared/Error.cshtml]

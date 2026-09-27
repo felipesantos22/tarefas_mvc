@@ -8,7 +8,19 @@
 
     <ItemGroup>
       <PackageReference Include="Dapper" Version="2.1.79" />
+      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.20" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.420">
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        <PrivateAssets>all</PrivateAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.420" />
       <PackageReference Include="Npgsql" Version="10.0.3" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.420" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Identity\AccessDenied.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Identity\Login.cshtml" />
     </ItemGroup>
 
 </Project>

@@ -1,4 +1,8 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Tarefas.Infrastructure.Identity;
 using Tarefas.Interfaces;
+using Tarefas.Models;
 using Tarefas.Repositories;
 using Tarefas.Services;
 
@@ -7,8 +11,18 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(
+        builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IIdentityRepository, IdentityRepository>();
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<TaskService>();
+
+builder.Services
+    .AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
 
 var app = builder.Build();
 
@@ -25,6 +39,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

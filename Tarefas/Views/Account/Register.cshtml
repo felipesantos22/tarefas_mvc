@@ -1,0 +1,78 @@
+@model Tarefas.Models.RegisterViewModel
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+
+                    <h2 class="text-center mb-4">
+                        Criar conta
+                    </h2>
+
+                    <form asp-action="Register" method="post">
+
+                        @Html.AntiForgeryToken()
+
+                        <div asp-validation-summary="ModelOnly"
+                             class="alert alert-danger">
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Email"
+                                   class="form-label">
+                            </label>
+
+                            <input asp-for="Email"
+                                   class="form-control"
+                                   placeholder="Digite seu e-mail"/>
+
+                            <span asp-validation-for="Email"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Password"
+                                   class="form-label">
+                            </label>
+
+                            <input asp-for="Password"
+                                   class="form-control"
+                                   placeholder="Digite sua senha"/>
+
+                            <span asp-validation-for="Password"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="ConfirmPassword"
+                                   class="form-label">
+                            </label>
+
+                            <input asp-for="ConfirmPassword"
+                                   class="form-control"
+                                   placeholder="Confirme sua senha"/>
+
+                            <span asp-validation-for="ConfirmPassword"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit"
+                                    class="btn btn-primary">
+                                Criar conta
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

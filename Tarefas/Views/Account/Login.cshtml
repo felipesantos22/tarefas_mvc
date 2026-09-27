@@ -1,0 +1,105 @@
+@model Tarefas.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5 col-lg-4">
+
+            <div class="card shadow">
+                <div class="card-body p-4">
+
+                    <h2 class="text-center mb-4">
+                        Login
+                    </h2>
+
+                    <form asp-action="Login"
+                          asp-controller="Account"
+                          method="post">
+
+                        @Html.AntiForgeryToken()
+
+                        <div asp-validation-summary="ModelOnly"
+                             class="text-danger mb-3">
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label asp-for="Email"
+                                   class="form-label">
+                            </label>
+
+                            <input asp-for="Email"
+                                   class="form-control"
+                                   placeholder="Digite seu email" />
+
+                            <span asp-validation-for="Email"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label asp-for="Password"
+                                   class="form-label">
+                            </label>
+
+                            <input asp-for="Password"
+                                   type="password"
+                                   class="form-control"
+                                   placeholder="Digite sua senha" />
+
+                            <span asp-validation-for="Password"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+                        <div class="form-check mb-3">
+
+                            <input asp-for="RememberMe"
+                                   class="form-check-input" />
+
+                            <label asp-for="RememberMe"
+                                   class="form-check-label">
+                                Lembrar de mim
+                            </label>
+
+                        </div>
+
+                        <div class="d-grid">
+
+                            <button type="submit"
+                                    class="btn btn-primary">
+                                Entrar
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                    <hr />
+
+                    <div class="text-center">
+
+                        <p class="mb-1">
+                            Não possui uma conta?
+                        </p>
+
+                        <a asp-action="Register"
+                           asp-controller="Account"
+                           class="btn btn-outline-secondary">
+                            Criar conta
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
